@@ -4,7 +4,10 @@ package com.example.clothingapp.pets;
  * Created by simonyan_51 on 18.03.2017.
  */
 public class Pet {
-    public String name;
+    public String name = "None";
+    public Pet(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

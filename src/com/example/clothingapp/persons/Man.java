@@ -7,13 +7,26 @@ import com.example.clothingapp.clothes.man_cloths.ManCloth;
  */
 public class Man extends Person {
 
-    public boolean hasTattoo;
+    public boolean hasTattoo = false;
     public String tattooColor;
-    public String tattoColor(String str) {
+    public void tattoColor(String str) {
         if (this.hasTattoo) {
-            return this.tattooColor = str;
+            this.tattooColor = str;
         }
-        return "None";
+    }
+
+    @Override public void draw() {
+        super.draw();
+        if (hasTattoo) {
+            System.out.println(this.firstName + " " + this.lastName + " Has Tattoo, Which color is " + this.tattooColor);
+        }
+        if (this.goOut()) {
+            System.out.println(this.firstName + " " + this.lastName + " Wears " + this.shoes + " Shoes, " + this.downDress + " Down Dress, \n "
+                    + this.topDress + " TopDress and " + this.hat + " hat.");
+            System.out.println("I look great, going out");
+        } else {
+            System.out.println("Sorry, Im Naked, Ain't Going Out");
+        }
     }
 
     public String getShoes() {

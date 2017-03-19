@@ -8,8 +8,7 @@ import com.example.clothingapp.clothes.man_cloths.ManCloth;
 public class Hat extends ManCloth {
 
     public String[] hatType = new String[] {"Flat Cap", "Cap", "Snap Back", "Fedora", "Knit Cap"};
-    public String wearedHatType;
-    public boolean hasWeared;
+    public String wearedHatType = "None";
 
     public String[] getHatType() {
         return hatType;
@@ -19,12 +18,11 @@ public class Hat extends ManCloth {
         this.wearedHatType = hatType[i];
     }
 
-    public boolean isHasWeared() {
-        return hasWeared;
-    }
-
-    public void setHasWeared(boolean hasWeared) {
-        this.hasWeared = hasWeared;
+    public boolean isWeared() {
+        if (!wearedHatType.equals("None")) {
+            return true;
+        }
+        return false;
     }
 
 }

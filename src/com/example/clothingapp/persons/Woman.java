@@ -6,9 +6,9 @@ import com.example.clothingapp.clothes.woman_cloths.WomanCloth;
  */
 public class Woman extends Person {
 
-    public boolean hasMakeup;
+    public boolean hasMakeup = false;
     public String lipstickColor;
-    public boolean hasEarrings;
+    public boolean hasEarrings = false;
 
     public boolean isHasEarrings() {
         return hasEarrings;
@@ -24,15 +24,25 @@ public class Woman extends Person {
 
     public void setLipstickColor(String lipstickColor) {
         this.lipstickColor = lipstickColor;
+        this.hasMakeup = true;
     }
 
-    @Override
-    public void goOut() {
-        boolean dressed = this.isDressed();
-        if (dressed && this.hasMakeup) {
-            System.out.println("I look great, goind out");
+    @Override public void draw() {
+        super.draw();
+        if (hasEarrings) {
+            System.out.println(this.firstName + " " + this.lastName + " Has Earrings");
+        }
+        System.out.println(this.firstName + " " + this.lastName + " Lipstick Color is " + this.lipstickColor);
+
+        if (this.goOut()) {
+            System.out.println(this.firstName + " " + this.lastName + " Wears " + this.shoes + " Shoes, " + this.downDress + " Down Dress, \n "
+                    + this.topDress + " TopDress and " + this.hat + " hat.");
+            if (!hasMakeup) {
+                System.out.println("No Way, I'm Not Maked Up!!");
+            } else
+                System.out.println("I look great, going out");
         } else {
-            System.out.println("No way, I will not go out without makeup!");
+            System.out.println("Sorry, Im Naked, Ain't Going Out");
         }
     }
 

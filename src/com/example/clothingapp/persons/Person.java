@@ -23,6 +23,13 @@ public class Person {
     public Cat cat;
     public Dog dog;
 
+    public void draw() {
+        System.out.println("First Name: " + this.firstName + " Last Name: " + this.lastName + " Age: " + this.age);
+        System.out.println(this.firstName + " " + this.lastName + " Has " + this.hairColor + " Hairs, " + this.eyeColor + " Eyes.");
+        System.out.println(this.firstName + " " + this.lastName + " Height Is " + this.height + ", Weight " + this.weight);
+        System.out.println(this.firstName + " " + this.lastName + " Has " + this.cat.name + " Cat, And " + this.dog.name + " Dog");
+    }
+
     public boolean isDressed() {
         if (this.downDress != null && this.topDress != null && this.shoes != null) {
             return true;
@@ -37,12 +44,11 @@ public class Person {
         return false;
     }
 
-    public void goOut() {
+    public boolean goOut() {
         if (isDressed()) {
-            System.out.println("I look great, going out");
-        } else {
-            System.out.println("Sorry, I'm naked, I am not going out");
+            return true;
         }
+         return false;
     }
 
     public String getFirstName() {
