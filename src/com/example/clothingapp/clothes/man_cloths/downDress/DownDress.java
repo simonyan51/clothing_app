@@ -7,4 +7,16 @@ import com.example.clothingapp.clothes.man_cloths.ManCloth;
  */
 public class DownDress extends ManCloth {
 
+    String[] downDress = new String[] {"Pants", "Jeans", "Classic Pants", "Shorts"};
+
+    public String wearedDownDress;
+
+    public String[] getDownDressType() {
+        return downDress;
+    }
+
+    public void setDownDressType(int i) {
+        this.wearedDownDress = downDress[i];
+    }
+
 }

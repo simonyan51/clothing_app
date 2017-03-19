@@ -7,4 +7,15 @@ import com.example.clothingapp.clothes.man_cloths.ManCloth;
  */
 public class TopDress extends ManCloth {
 
+    public String[] topDressType = new String[] {"Shirt", "T-Shirt", "Sweater"};
+    public String wearedTopDress;
+
+    public String[] getTopDressType() {
+        return topDressType;
+    }
+
+    public void setTopDressType(int i) {
+        this.wearedTopDress = topDressType[i];
+    }
+
 }

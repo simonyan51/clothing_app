@@ -7,16 +7,16 @@ import com.example.clothingapp.clothes.woman_cloths.WomanCloth;
  */
 public class Hat extends WomanCloth {
 
-    public String type;
+    public String[] hatType = new String[] {"Flat Cap", "Cap", "Snap Back", "Fedora", "Knit Cap"};
+    public String wearedHatType;
     public boolean hasWeared;
-    public String position;
 
-    public String getType() {
-        return type;
+    public String[] getHatType() {
+        return hatType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setHatType(int i) {
+        this.wearedHatType = hatType[i];
     }
 
     public boolean isHasWeared() {
@@ -25,13 +25,5 @@ public class Hat extends WomanCloth {
 
     public void setHasWeared(boolean hasWeared) {
         this.hasWeared = hasWeared;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
     }
 }

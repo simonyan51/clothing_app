@@ -7,33 +7,16 @@ import com.example.clothingapp.clothes.woman_cloths.WomanCloth;
  */
 public class Shoes extends WomanCloth {
 
-    public String shoesName;
-    public boolean hasBootlace;
-    public boolean hasHoles;
+    public String[] shoesType = new String[] {"Boots", "Classic Shoes", "Stiletto"};
+    public String wearedShoes;
     public int number;
 
-    public String getShoesName() {
-        return shoesName;
+    public String[] getShoesType() {
+        return shoesType;
     }
 
-    public void setShoesName(String shoesName) {
-        this.shoesName = shoesName;
-    }
-
-    public boolean isHasBootlace() {
-        return hasBootlace;
-    }
-
-    public void setHasBootlace(boolean hasBootlace) {
-        this.hasBootlace = hasBootlace;
-    }
-
-    public boolean isHasHoles() {
-        return hasHoles;
-    }
-
-    public void setHasHoles(boolean hasHoles) {
-        this.hasHoles = hasHoles;
+    public void setShoesType(int i) {
+        this.wearedShoes = shoesType[i];
     }
 
     public int getNumber() {
