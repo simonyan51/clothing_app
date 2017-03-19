@@ -1,5 +1,6 @@
 package com.example.clothingapp.persons;
 
+import com.example.clothingapp.clothes.woman_cloths.WomanCloth;
 /**
  * Created by simonyan_51 on 18.03.2017.
  */
@@ -33,6 +34,37 @@ public class Woman extends Person {
         } else {
             System.out.println("No way, I will not go out without makeup!");
         }
+    }
+
+    public String getShoes() {
+        return shoes;
+    }
+    public void setShoes(WomanCloth shoes) {
+        this.shoes = shoes.shoes;
+    }
+
+    public String getTopDress() {
+        return topDress;
+    }
+
+    public void setTopDress(WomanCloth topDress) {
+        this.topDress = topDress.topDress;
+    }
+
+    public String getDownDress() {
+        return downDress;
+    }
+
+    public void setDownDress(WomanCloth downDress) {
+        this.downDress = downDress.downDress;
+    }
+
+    public String getHat() {
+        return hat;
+    }
+
+    public void setHat(WomanCloth hat) {
+        this.hat = hat.hat;
     }
 
 

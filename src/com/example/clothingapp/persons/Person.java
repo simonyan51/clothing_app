@@ -16,10 +16,10 @@ public class Person {
     public String eyeColor;
     public int height;
     public int weight;
-    public Cloth shoes;
-    public Cloth topDress;
-    public Cloth downDress;
-    public Cloth hat;
+    public String shoes;
+    public String topDress;
+    public String downDress;
+    public String hat;
     public Cat cat;
     public Dog dog;
 
@@ -99,38 +99,6 @@ public class Person {
 
     public void setWeight(int weight) {
         this.weight = weight;
-    }
-
-    public Cloth getShoes() {
-        return shoes;
-    }
-
-    public void setShoes(Cloth shoes) {
-        this.shoes = shoes;
-    }
-
-    public Cloth getTopDress() {
-        return topDress;
-    }
-
-    public void setTopDress(Cloth topDress) {
-        this.topDress = topDress;
-    }
-
-    public Cloth getDownDress() {
-        return downDress;
-    }
-
-    public void setDownDress(Cloth downDress) {
-        this.downDress = downDress;
-    }
-
-    public Cloth getHat() {
-        return hat;
-    }
-
-    public void setHat(Cloth hat) {
-        this.hat = hat;
     }
 
     public Cat getCat() {
