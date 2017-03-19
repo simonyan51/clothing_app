@@ -16,26 +16,51 @@ public class Person {
     public String eyeColor;
     public int height;
     public int weight;
-    public String shoes;
-    public String topDress;
-    public String downDress;
-    public String hat;
     public Cat cat;
     public Dog dog;
 
-    public void draw() {
-        System.out.println("First Name: " + this.firstName + " Last Name: " + this.lastName + " Age: " + this.age);
-        System.out.println(this.firstName + " " + this.lastName + " Has " + this.hairColor + " Hairs, " + this.eyeColor + " Eyes.");
-        System.out.println(this.firstName + " " + this.lastName + " Height Is " + this.height + ", Weight " + this.weight);
-        System.out.println(this.firstName + " " + this.lastName + " Has " + this.cat.name + " Cat, And " + this.dog.name + " Dog");
+    public Person(String firstName, String lastName, int age, String hairColor, String eyeColor, int height, int weight) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.hairColor = hairColor;
+        this.eyeColor = eyeColor;
+        this.height = height;
+        this.weight = weight;
     }
 
-    public boolean isDressed() {
-        if (this.downDress != null && this.topDress != null && this.shoes != null) {
-            return true;
+    public void draw() {
+        System.out.println("First Name: " + this.firstName);
+        System.out.println("Last Name: " + this.lastName);
+        System.out.println("Age: " + this.age);
+        System.out.println("Hair Color: " + this.hairColor);
+        System.out.println("Eye Color: " + this.eyeColor);
+        System.out.println("Height: " + this.height);
+        System.out.println("Weight: " + this.weight);
+
+
+        if (dog.has) {
+            System.out.println("\n \nDog:");
+            System.out.println("Type: " + this.dog.type);
+            System.out.println("Name: " + this.dog.name);
+            System.out.println("Age: " + this.dog.age);
+            System.out.println("Gender: " + this.dog.gender);
+            System.out.println("Color: " + this.dog.color);
+        } else {
+            System.out.println("\n \nDon't Have Dog");
         }
-        return false;
+        if (cat.has) {
+            System.out.println("\n \nCat:");
+            System.out.println("Type: " + this.cat.type);
+            System.out.println("Name: " + this.cat.name);
+            System.out.println("Age: " + this.cat.age);
+            System.out.println("Gender: " + this.cat.gender);
+            System.out.println("Color: " + this.cat.color);
+        } else {
+            System.out.println("\n \nDon't Have Cat");
+        }
     }
+
 
     public boolean hasPets() {
         if (this.dog != null || this.cat != null) {
@@ -44,12 +69,6 @@ public class Person {
         return false;
     }
 
-    public boolean goOut() {
-        if (isDressed()) {
-            return true;
-        }
-         return false;
-    }
 
     public String getFirstName() {
         return firstName;
