@@ -8,6 +8,6 @@ import com.example.clothingapp.clothes.man_cloths.shoes.*;
 public class Cabloo extends Shoes {
     public Cabloo(String brand, String color, int size, double price, boolean has, String season, String style) {
         super(brand, color, size, price, has, season, style);
-        this.name = "Cabloo";
+        this.setName("Cabloo");
     };
 }

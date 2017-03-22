@@ -8,11 +8,11 @@ import com.example.clothingapp.pets.Pet;
 public class Dog extends Pet {
 
     public Dog(String name, int age, String gender, String color, boolean has) {
-        this.type = "Dog";
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.color = color;
-        this.has = has;
+        this.setType("Dog");
+        this.setName(name);
+        this.setAge(age);
+        this.setGender(gender);
+        this.setColor(color);
+        this.setHas(has);
     }
 }

@@ -5,13 +5,29 @@ import com.example.clothingapp.clothes.woman_cloths.WomanCloth;
 /**
  * Created by simonyan_51 on 18.03.2017.
  */
-public class Shoes extends WomanCloth {
-    public Shoes(String brand, String color, int size, double price, boolean has, String season, String style) {
+public abstract class Shoes extends WomanCloth {
+    protected Shoes(String brand, String color, int size, double price, boolean has, String season, String style) {
         super(brand, color, size, price, has);
         this.season = season;
         this.style = style;
     }
-    public String type = "Shoes";
-    public String season;
-    public String style;
+    public final String TYPE = "Shoes";
+    private String season;
+    private String style;
+
+    public String getSeason() {
+        return season;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
+    public String getStyle() {
+        return style;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
 }

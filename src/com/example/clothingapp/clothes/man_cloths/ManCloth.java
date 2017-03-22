@@ -9,9 +9,9 @@ import com.example.clothingapp.clothes.man_cloths.shoes.Shoes;
 /**
  * Created by simonyan_51 on 18.03.2017.
  */
-public class ManCloth extends Cloth {
-    public ManCloth(String brand, String color, int size, double price, boolean has) {
+public abstract class ManCloth extends Cloth {
+    protected ManCloth(String brand, String color, int size, double price, boolean has) {
         super(brand, color, size, price, has);
     }
-    public String category = "Man Cloths";
+    public final String CATEGORY = "Man Cloths";
 }

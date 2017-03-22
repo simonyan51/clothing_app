@@ -7,12 +7,12 @@ import com.example.clothingapp.pets.Pet;
  */
 public class Cat extends Pet {
     public Cat(String name, int age, String gender, String color, boolean has) {
-        this.type = "Cat";
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
-        this.color = color;
-        this.has = has;
+        this.setType("Cat");
+        this.setName(name);
+        this.setAge(age);
+        this.setGender(gender);
+        this.setColor(color);
+        this.setHas(has);
     }
 
 }

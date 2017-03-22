@@ -6,6 +6,6 @@ package com.example.clothingapp.clothes.woman_cloths.hats;
 public class Fedora extends Hat {
     public Fedora(String brand, String color, int size, double price, boolean has, String style) {
         super(brand, color, size, price, has, style);
-        this.name = "Fedora";
+        this.setName("Fedora");
     };
 }

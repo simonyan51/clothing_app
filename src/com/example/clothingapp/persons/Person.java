@@ -7,19 +7,19 @@ import com.example.clothingapp.pets.dogs.Dog;
 /**
  * Created by simonyan_51 on 18.03.2017.
  */
-public class Person {
+public abstract class Person {
 
-    public String firstName;
-    public String lastName;
-    public int age;
-    public String hairColor;
-    public String eyeColor;
-    public int height;
-    public int weight;
-    public Cat cat;
-    public Dog dog;
+    private String firstName;
+    private String lastName;
+    private int age;
+    private String hairColor;
+    private String eyeColor;
+    private int height;
+    private int weight;
+    private Cat cat;
+    private Dog dog;
 
-    public Person(String firstName, String lastName, int age, String hairColor, String eyeColor, int height, int weight) {
+    protected Person(String firstName, String lastName, int age, String hairColor, String eyeColor, int height, int weight) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -39,30 +39,30 @@ public class Person {
         System.out.println("Weight: " + this.weight);
 
 
-        if (dog.has) {
+        if (dog.isHas()) {
             System.out.println("\n \nDog:");
-            System.out.println("Type: " + this.dog.type);
-            System.out.println("Name: " + this.dog.name);
-            System.out.println("Age: " + this.dog.age);
-            System.out.println("Gender: " + this.dog.gender);
-            System.out.println("Color: " + this.dog.color);
+            System.out.println("Type: " + this.dog.getType());
+            System.out.println("Name: " + this.dog.getName());
+            System.out.println("Age: " + this.dog.getAge());
+            System.out.println("Gender: " + this.dog.getGender());
+            System.out.println("Color: " + this.dog.getColor());
         } else {
             System.out.println("\n \nDon't Have Dog");
         }
-        if (cat.has) {
+        if (cat.isHas()) {
             System.out.println("\n \nCat:");
-            System.out.println("Type: " + this.cat.type);
-            System.out.println("Name: " + this.cat.name);
-            System.out.println("Age: " + this.cat.age);
-            System.out.println("Gender: " + this.cat.gender);
-            System.out.println("Color: " + this.cat.color);
+            System.out.println("Type: " + this.cat.getType());
+            System.out.println("Name: " + this.cat.getName());
+            System.out.println("Age: " + this.cat.getAge());
+            System.out.println("Gender: " + this.cat.getGender());
+            System.out.println("Color: " + this.cat.getColor());
         } else {
             System.out.println("\n \nDon't Have Cat");
         }
     }
 
 
-    public boolean hasPets() {
+    private boolean hasPets() {
         if (this.dog != null || this.cat != null) {
             return true;
         }

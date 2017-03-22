@@ -6,6 +6,6 @@ package com.example.clothingapp.clothes.man_cloths.hats;
 public class Cap extends Hat{
     public Cap(String brand, String color, int size, double price, boolean has, String style) {
         super(brand, color, size, price, has, style);
-        this.name = "Cap";
+        this.setName("Cap");
     };
 }

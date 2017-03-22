@@ -18,12 +18,16 @@ public class Man extends Person {
         this.tattooColor = tattooColor;
     }
 
-    public Shoes shoes;
-    public TopDress topDress;
-    public DownDress downDress;
-    public Hat hat;
-    public boolean hasTattoo = false;
-    public String tattooColor;
+    private Shoes shoes;
+    private TopDress topDress;
+    private DownDress downDress;
+    private Hat hat;
+    private boolean hasTattoo;
+    private String tattooColor;
+
+    public void setHasTattoo(boolean has) {
+        this.hasTattoo = has;
+    }
 
     @Override public void draw() {
         super.draw();
@@ -32,58 +36,58 @@ public class Man extends Person {
             System.out.println("Tattoo Color: " + this.tattooColor);
         }
         System.out.println("\n \nShoes:");
-        if (this.shoes.has) {
-            System.out.println("Brand: " + this.shoes.brand);
-            System.out.println("Color: " + this.shoes.color);
-            System.out.println("Size: " + this.shoes.size);
-            System.out.println("Price: " + this.shoes.price);
-            System.out.println("Category: " + this.shoes.category);
-            System.out.println("Type: " + this.shoes.type);
-            System.out.println("Name: " + this.shoes.name);
-            System.out.println("Season: " + this.shoes.season);
-            System.out.println("Style: " + this.shoes.style);
+        if (this.shoes.isHas()) {
+            System.out.println("Brand: " + this.shoes.getBrand());
+            System.out.println("Color: " + this.shoes.getColor());
+            System.out.println("Size: " + this.shoes.getSize());
+            System.out.println("Price: " + this.shoes.getPrice());
+            System.out.println("Category: " + this.shoes.CATEGORY);
+            System.out.println("Type: " + this.shoes.TYPE);
+            System.out.println("Name: " + this.shoes.getName());
+            System.out.println("Season: " + this.shoes.getSeason());
+            System.out.println("Style: " + this.shoes.getStyle());
         } else {
             System.out.println("No Shoes");
         }
 
         System.out.println("\n \nDown Dress:");
-        if (this.downDress.has) {
-            System.out.println("Brand: " + this.downDress.brand);
-            System.out.println("Color: " + this.downDress.color);
-            System.out.println("Size: " + this.downDress.size);
-            System.out.println("Price: " + this.downDress.price);
-            System.out.println("Category: " + this.downDress.category);
-            System.out.println("Type: " + this.downDress.type);
-            System.out.println("Name: " + this.downDress.name);
-            System.out.println("Fit: " + this.downDress.fit);
+        if (this.downDress.isHas()) {
+            System.out.println("Brand: " + this.downDress.getBrand());
+            System.out.println("Color: " + this.downDress.getColor());
+            System.out.println("Size: " + this.downDress.getSize());
+            System.out.println("Price: " + this.downDress.getPrice());
+            System.out.println("Category: " + this.downDress.CATEGORY);
+            System.out.println("Type: " + this.downDress.TYPE);
+            System.out.println("Name: " + this.downDress.getName());
+            System.out.println("Fit: " + this.downDress.getFit());
         } else {
             System.out.println("No Down Dress");
         }
 
         System.out.println("\n \nTop Dress:");
-        if (this.downDress.has) {
-            System.out.println("Brand: " + this.topDress.brand);
-            System.out.println("Color: " + this.topDress.color);
-            System.out.println("Size: " + this.topDress.size);
-            System.out.println("Price: " + this.topDress.price);
-            System.out.println("Category: " + this.topDress.category);
-            System.out.println("Type: " + this.topDress.type);
-            System.out.println("Name: " + this.topDress.name);
-            System.out.println("Sleeves: " + this.topDress.sleeveType);
+        if (this.downDress.isHas()) {
+            System.out.println("Brand: " + this.topDress.getBrand());
+            System.out.println("Color: " + this.topDress.getColor());
+            System.out.println("Size: " + this.topDress.getSize());
+            System.out.println("Price: " + this.topDress.getPrice());
+            System.out.println("Category: " + this.topDress.CATEGORY);
+            System.out.println("Type: " + this.topDress.TYPE);
+            System.out.println("Name: " + this.topDress.getName());
+            System.out.println("Sleeves: " + this.topDress.getSleeveType());
         } else {
             System.out.println("No Down Dress");
         }
 
         System.out.println("\n \nHat:");
-        if (this.hat.has) {
-            System.out.println("Brand: " + this.hat.brand);
-            System.out.println("Color: " + this.hat.color);
-            System.out.println("Size: " + this.hat.size);
-            System.out.println("Price: " + this.hat.price);
-            System.out.println("Category: " + this.hat.category);
-            System.out.println("Type: " + this.hat.type);
-            System.out.println("Name: " + this.hat.name);
-            System.out.println("Fit: " + this.hat.style);
+        if (this.hat.isHas()) {
+            System.out.println("Brand: " + this.hat.getBrand());
+            System.out.println("Color: " + this.hat.getColor());
+            System.out.println("Size: " + this.hat.getSize());
+            System.out.println("Price: " + this.hat.getPrice());
+            System.out.println("Category: " + this.hat.CATEGORY);
+            System.out.println("Type: " + this.hat.TYPE);
+            System.out.println("Name: " + this.hat.getName());
+            System.out.println("Fit: " + this.hat.getStyle());
         } else {
             System.out.println("No Hat");
         }
@@ -97,8 +101,8 @@ public class Man extends Person {
 
     }
 
-    public boolean isDressed() {
-        if (!this.downDress.has || !this.topDress.has || !this.shoes.has) {
+    private boolean isDressed() {
+        if (!this.downDress.isHas() || !this.topDress.isHas() || !this.shoes.isHas()) {
             return false;
         }
         return true;

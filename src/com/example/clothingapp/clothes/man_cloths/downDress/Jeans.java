@@ -6,6 +6,6 @@ package com.example.clothingapp.clothes.man_cloths.downDress;
 public class Jeans extends DownDress {
     public Jeans(String brand, String color, int size, double price, boolean has, String fit) {
         super(brand, color, size, price, has, fit);
-        this.name = "Jeans";
+        this.setName("Jeans");
     };
 }
