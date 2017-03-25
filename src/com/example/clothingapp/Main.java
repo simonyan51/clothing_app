@@ -17,6 +17,7 @@ import com.example.clothingapp.persons.Man;
 import com.example.clothingapp.persons.Woman;
 import com.example.clothingapp.pets.cats.Cat;
 import com.example.clothingapp.pets.dogs.Dog;
+import com.example.clothingapp.shop.Shop;
 
 /**
  * Created by simonyan_51 on 19.03.2017.
@@ -35,6 +36,7 @@ public class Main {
                 true,
                 "Black"
         );
+
         com.example.clothingapp.clothes.man_cloths.shoes.Shoes shoes = new Sneakers(
                 "Nike",
                 "White",
@@ -144,6 +146,9 @@ public class Main {
                 "Summer",
                 "Classic"
         );
+
+        Shop myShop = new Shop();
+        System.out.println("\n \n \n " + myShop.getTotalPrice() + "\n \n \n ");
 
         woman1.setDog(dog);
         woman1.setCat(cat);

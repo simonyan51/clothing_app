@@ -1,9 +1,11 @@
 package com.example.clothingapp.clothes;
 
+import com.example.clothingapp.shop.Shop;
+
 /**
  * Created by simonyan_51 on 18.03.2017.
  */
-public abstract class Cloth {
+public class Cloth {
 
     protected Cloth(String brand, String color, int size, double price, boolean has) {
         this.color = color;
